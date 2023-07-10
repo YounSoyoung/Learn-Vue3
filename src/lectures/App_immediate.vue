@@ -9,22 +9,20 @@
 import { ref, watch } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const message = ref('Hello Vue3');
 		const reverseMessage = ref('');
 
 		const reverseFunction = newValue => {
 			console.log('즉시실행!!!!');
 			reverseMessage.value = message.value.split('').reverse().join('');
-		}
+		};
 		watch(message, reverseFunction);
 		reverseFunction(message.value);
 
-		return { message, reverseMessage};
-	}
-}
+		return { message, reverseMessage };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

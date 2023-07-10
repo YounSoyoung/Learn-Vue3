@@ -14,23 +14,43 @@
 
 		<h2>checkbox value</h2>
 		<label for="checkbox">{{ checkboxValue }}</label>
-		<input type="checkbox" id="checkbox" v-model="checkboxValue" true-value="Yes" false-value="No"/>
+		<input
+			type="checkbox"
+			id="checkbox"
+			v-model="checkboxValue"
+			true-value="Yes"
+			false-value="No"
+		/>
 		<!-- <input type="checkbox" id="checkbox" :checked="checkboxValue" @change="event => (checkboxValue = event.target.checked)"/> -->
 
 		<h3>checkbox values</h3>
-		<label><input type="checkbox" value="html" v-model="checkboxValues">HTML</label>
-		<label><input type="checkbox" value="css" v-model="checkboxValues">CSS</label>
-		<label><input type="checkbox" value="javascript" v-model="checkboxValues">JavaScript</label>
+		<label
+			><input
+				type="checkbox"
+				value="html"
+				v-model="checkboxValues"
+			/>HTML</label
+		>
+		<label
+			><input type="checkbox" value="css" v-model="checkboxValues" />CSS</label
+		>
+		<label
+			><input
+				type="checkbox"
+				value="javascript"
+				v-model="checkboxValues"
+			/>JavaScript</label
+		>
 		<div>{{ checkboxValues }}</div>
 
 		<h2>radio value</h2>
 		<label>
 			<!-- <input type="radio" name="type" value="O" :checked="radioValue === 'O'" @change="event => (radioValue = event.target.value)"/> -->
-			<input type="radio" name="type" value="O" v-model="radioValue"/>
+			<input type="radio" name="type" value="O" v-model="radioValue" />
 			O형
 		</label>
 		<label>
-			<input type="radio" name="type" value="A" v-model="radioValue"/>
+			<input type="radio" name="type" value="A" v-model="radioValue" />
 			A형
 		</label>
 		<div>{{ radioValue }}</div>
@@ -38,9 +58,9 @@
 		<h2>select Value</h2>
 		<!-- <select v-model="selectValue" :value="selectValue" @change="event => (selectValue = event.target.value)"> -->
 		<select v-model="selectValue">
-  			<option value="html">HTML 수업</option>
-  			<option value="css">CSS 수업</option>
-  			<option value="javascript">JavaScript 수업</option>
+			<option value="html">HTML 수업</option>
+			<option value="css">CSS 수업</option>
+			<option value="javascript">JavaScript 수업</option>
 		</select>
 		<div>{{ selectValue }}</div>
 	</div>
@@ -50,7 +70,7 @@
 import { ref } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const inputValue = ref('');
 		const textareaValue = ref('');
 		const checkboxValue = ref('Yes');
@@ -58,11 +78,16 @@ export default {
 		const radioValue = ref('O');
 		const selectValue = ref('html');
 
-		return {inputValue, textareaValue, checkboxValue, radioValue, selectValue, checkboxValues}
-	}
-}
+		return {
+			inputValue,
+			textareaValue,
+			checkboxValue,
+			radioValue,
+			selectValue,
+			checkboxValues,
+		};
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

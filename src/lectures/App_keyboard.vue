@@ -11,18 +11,15 @@
 import { reactive } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const todos = reactive([]);
 
 		const addTodo = event => {
 			todos.push(event.target.value);
-			
-		}
-		return {todos, addTodo}
-	}
-}
+		};
+		return { todos, addTodo };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

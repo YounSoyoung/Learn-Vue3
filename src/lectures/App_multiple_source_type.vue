@@ -1,14 +1,12 @@
 <template>
-	<div>
-
-	</div>
+	<div></div>
 </template>
 
 <script>
 import { reactive, ref, watch } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const x = ref(0);
 		const y = ref(0);
 
@@ -39,31 +37,28 @@ export default {
 		// })
 
 		const person = reactive({
-  name: '홍길동',
-  age: 30,
-  hobby: '운동',
-  obj: {
-    count: 0,
-  },
-});
+			name: '홍길동',
+			age: 30,
+			hobby: '운동',
+			obj: {
+				count: 0,
+			},
+		});
 
-// watch(person, (newValue) => {
-//   console.log('newValue: ', newValue);
-// });
+		// watch(person, (newValue) => {
+		//   console.log('newValue: ', newValue);
+		// });
 
-watch(
-	() => person.obj,
-	newValue => {
-		console.log('newValue: ', newValue);
-	}
-)
+		watch(
+			() => person.obj,
+			newValue => {
+				console.log('newValue: ', newValue);
+			},
+		);
 
-
-		return {x, y, obj, person};
-	}
-}
+		return { x, y, obj, person };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
