@@ -23,7 +23,7 @@
 					:model-value="username"
 					@update:model-value="value => (username = value)"
 				></LabelInput> -->
-				<LabelInput v-model="username"></LabelInput>
+				<LabelInput v-model="username" label="이름"></LabelInput>
 			</div>
 		</main>
 	</div>
